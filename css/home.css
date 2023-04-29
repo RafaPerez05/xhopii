@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: 6rem;
+    background-color:#fb5630 ;
+    display: flex;
+    align-items: center;
+}
+header img{
+    height: 6rem;
+}
+header h1{
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    margin:0;
+    margin-left: 1rem;
+    font-size: 2.5rem;
+}
+header ul{
+    display: flex;
+}
+header ul li{
+    list-style: none;
+  }
+  header ul li a{
+    font-size: 35px;
+      color: #ffffff;
+      font-family: Arial;
+    font-weight: bold;
+      text-decoration: none;
+     margin-left: 65rem;
+      display: block;
+  }
+
+nav{
+    width: 100vw;
+    height: 5vh;
+    background-color: rgb(251, 119, 48);
+    position: relative;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+nav ul {
+    display: flex;
+    font-family: Arial;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+  
+nav ul li {
+    list-style: none;
+  }
+  
+nav ul li a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+nav ul li a:hover{
+    font-weight: bold;
+    color: rgb(251,86,48);
+    background-color: rgb(255, 255, 255);
+}
+
+
+@media(min-width: 1024px) {
+    .div-img-carousel, .item.active {
+        overflow: hidden;
+        width: 700px;
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    .carousel-inner {
+        margin-inline-start: 15%;
+        width: 70%;
+    }
+
+    #meuSlider {
+        width:100%;
+        height: 380px;
+    }
+
+}
+.promo img{
+    width: 70%;
+    margin-inline-start: 15%;
+}
+h1{
+font-size: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+color:#fb5630
+}
+.sobretudo{
+    padding:20px;
+  }
+  .sobretudo p{
+    margin-top:10px;
+    margin-left:200px;
+    opacity:0.5;
+    font-size:12px;
+  }
+  .sobretudo h5{
+    margin-left:200px;
+  }
+  .sobremenos p{
+    margin-top:10px;
+    margin-left:100px;
+    opacity:0.5;
+    font-size:12px;
+  }
+  .sobremenos h5{
+    margin-left:100px;
+  }
+  .sobremenos{
+    padding:20px;
+  }
+  .rodape-container{
+    display:flex;
+  }
+
+  .produtos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+  }
+
+  .pagamento{
+    padding:20px;
+  }
+  .pagamento p{
+    margin-top:10px;
+    margin-left:200px;
+    opacity:0.5;
+    font-size:12px;
+  }
+  .pagamento h5{
+    margin-left:200px;
+  }
+
+  .atendimento{
+    padding:20px;
+  }
+  .atendimento p{
+    margin-top:10px;
+    margin-left:200px;
+    opacity:0.5;
+    font-size:12px;
+  }
+  .atendimento h5{
+    margin-left:200px;
+  }
+
+  .Siga{
+    padding:20px;
+    display: grid;
+  }
+  .siga p{
+    margin-top:10px;
+    margin-left:200px;
+    opacity:0.5;
+    font-size:12px;
+  }
+  .Siga h5{
+    margin-left:200px;
+  }
+  .text{
+  margin-left: 42%;
+  }

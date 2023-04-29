@@ -99,36 +99,36 @@
           <p>Empresa</p>
         </div>
   
-    <div class="pagamento">
+        <div class="pagamento">
           <h5>PAGAMENTO</h5>
           <seaction  style="display: grid;   grid-template-columns: 30px 30px 30px; margin: 0 auto;     right: 45.9%;
           position: absolute;">
-          <img src="img/pix.png" width="30" height="30">
-          <img src="img/boleto.png" width="30" height="30">
-          <img src="img/American-Expres.png" width="30" height="30">
-          <img src="img/Visa-logo.png" width="30" height="30">
-          <img src="img/mastercard.png" width="30" height="30">
-          <img src="img/hipercard-logo-3.png" width="30" height="30">
-          <img src="img/elo.png" width="30" height="30">
+          <img src="../img/pix.png" width="30" height="30">
+          <img src="../img/boleto.png" width="30" height="30">
+          <img src="../img/American-Expres.png" width="30" height="30">
+          <img src="../img/Visa-logo.png" width="30" height="30">
+          <img src="../img/mastercard.png" width="30" height="30">
+          <img src="../img/hipercard-logo-3.png" width="30" height="30">
+          <img src="../img/elo.png" width="30" height="30">
           </seaction>
     </div>
     
         <div class="Siga">
           <h5>SIGA-NOS</h5>
-          <section style="display:grid; row-gap: 1rem; margin: 0 auto; top: 165%; right: 28.4%; position: absolute;">
-            <img src="img/insta.png" width="20" height="20">
-            <img src="img/tw.png" width="20" height="20">
-            <img src="img/face.png" width="20" height="20">
-            <img src="img/lk.png" width="20" height="20">
+          <section style="display:grid; row-gap: 1rem; margin: 0 auto; top: 92%; right: 30.4%; position: absolute;">
+            <img src="../img/insta.png" width="20" height="20">
+            <img src="../img/tw.png" width="20" height="20">
+            <img src="../img/face.png" width="20" height="20">
+            <img src="../img/lk.png" width="20" height="20">
         </section>
         </div>
     
         <div class="atendimento">
           <h5>ATENDIMENTO AO CLIENTE</h5>
           <section style="display: grid; row-gap: 1rem; position: absolute; right: 13.9%;">
-          <img src="img/qr.png" width="70" height="70">
-          <img src="img/play.png"> 
-          <img src="img/ap.png">
+          <img src="../img/qr.png" width="70" height="70">
+          <img src="../img/play.png"> 
+          <img src="../img/ap.png">
         </section>
         </div>
       

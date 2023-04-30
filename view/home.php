@@ -1,3 +1,6 @@
+<?php
+    require "../processamento/funcoesBD.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,22 +81,32 @@
           <br>
           
 
-          <h1>DESCOBERTAS DO DIA</h1>
+          <main>
+          <h1>Destaques da semana</h1>
+        <p>
+        <?php
+                $listaProduto = retornarProduto();
+                echo "<div class=\"container\">";
 
-          
-         <!--Fazer Grid Camisetas -->
+                while($produto = mysqli_fetch_assoc($listaProduto)){
+                  echo "<div class=\"produto\">";
+                    echo "<img src=".$produto['pro_img'] ." >";
+                      echo "<div class=\"product-info\">" . $produto["pro_nome"];
+                    echo "<div class=\"pre\"";
+                    echo "<a class=\"preço\">Preço:R$" . $produto["pro_val"] . "</a>";
+                    echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp";
+                    echo "<a class=\"quant\">Quantidade: " . $produto["pro_qtd"] . "</a>";
+                      echo "</div>";
+                    echo "</div>";
+                  echo "</div>";
+                }
+                echo "</div>";
+            ?>
 
 
 
 
-
-
-
-
-
-
-
-
+</main>
 
          <footer class="rodape-container">
         <div class="sobretudo">

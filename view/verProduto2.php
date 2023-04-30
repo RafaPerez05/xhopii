@@ -38,26 +38,29 @@
 </header>
 
 <main>
-            <div class="container">
+<h1>Produtos</h1>
+
 
         <?php
                 $listaProduto = retornarProduto();
+                echo "<div class=\"container\">";
                 while($produto = mysqli_fetch_assoc($listaProduto)){
-                    echo "<div class=\"produto\">";
+                  echo "<div class=\"produto\">";
                     echo "<img src=".$produto['pro_img'] ." >";
-                    echo "<div class=\"product-info\">Descrição: " . $produto["pro_des"] . "</p>";
+                      echo "<div class=\"product-info\">Descrição: " . $produto["pro_des"];
+                      echo "<p>";
+                      echo "<div class=\"product-info\">Fabricante: " . $produto["pro_fab"];
                     echo "<div class=\"pre\"";
-                    echo "<a class=\"preço\"> " . $produto["pro_val"] . "</a>";
+                    echo "<a class=\"preço\">Preço:R$" . $produto["pro_val"] . "</a>";
                     echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp";
-                    echo "<a class=\"quant\">" . $produto["pro_qtd"] . "</a>";
+                    echo "<a class=\"quant\">Quantidade: " . $produto["pro_qtd"] . "</a>";
+                      echo "</div>";
+                      echo "</div>";
                     echo "</div>";
-                    echo "</div>";
-
-
+                  echo "</div>";
                 }
+                echo "</div>";
             ?>
-
-            </div>
 
 
 

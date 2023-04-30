@@ -1,27 +1,27 @@
 <?php
     require "../processamento/funcoesBD.php";
 ?>
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="icon" href="../img/logo.png" type="image/png">
-    <title>Xhopii - Ver Funcionarios</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/grid.css">
+  <title>Ver Produto</title>
 </head>
 <body>
+  
+  <header>
 
-    <header>
-        <section id="cabecalho-logo">
+<nav class=top >
+            <div class=logo1>
             <img src="../img/logo.png">
             <h1>Xhopii</h1>
-        </section>
-        <section id="cabecalho-logout">
+            </div>
+            <section id="cabecalho-logout">
             <a href="../view/login.php">Sair</a>
         </section>
-    </header>
+</nav>
 
     <nav class="menu-horizontal">
         <ul>
@@ -35,27 +35,40 @@
         </ul>
     </nav>
 
-    <section class="conteudo-visualizar">
-        <section class="conteudo-visualizar-box">
-            <h1>Funcionarios</h1>
-            <?php
-                $listaFuncionario = retornarFuncionario();
-                while($Funcionario = mysqli_fetch_assoc($listaFuncionario)){
-                    echo "<section class=\"conteudo-bloco\">";
-                    echo "<h2>" . $Funcionario["fun_nome"] . " " . $Funcionario["fun_sobrenome"] . "</h2>";
-                    echo "<p>CPF: " . $Funcionario["fun_cpf"] . "</p>";
-                    echo "<p>Data Nascimento: " . $Funcionario["fun_dataNasc"] . "</p>";
-                    echo "<p>Telefone: " . $Funcionario["fun_telefone"] . "</p>";
-                    echo "<p>Cargo: " . $Funcionario["fun_cargo"] . "</p>";
-                    echo "<p>Salario: " . $Funcionario["fun_salario"] . "</p>";
-                    echo "<p>E-mail: " . $Funcionario["fun_email"] . "</p>";
-                    echo "</section>";
+</header>
+
+<main>
+            <div class="container">
+
+        <?php
+                $listaProduto = retornarProduto();
+                while($produto = mysqli_fetch_assoc($listaProduto)){
+                    echo "<div class=\"produto\">";
+                    echo "<img src=".$produto['pro_img'] ." >";
+                    echo "<div class=\"product-info\">Descrição: " . $produto["pro_des"] . "</p>";
+                    echo "<div class=\"pre\"";
+                    echo "<a class=\"preço\"> " . $produto["pro_val"] . "</a>";
+                    echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp";
+                    echo "<a class=\"quant\">" . $produto["pro_qtd"] . "</a>";
+                    echo "</div>";
+                    echo "</div>";
+
+
                 }
             ?>
-        </section>
-    </section>
 
-    <footer class="rodape-container">
+            </div>
+
+
+
+
+</main>
+
+
+  
+  
+  
+<footer class="rodape-container">
         <div class="sobretudo">
           <h5>ATENDIMENTO AO CLIENTE</h5>
           <p>Central de Ajuda</p>
@@ -91,11 +104,11 @@
           <img src="../img/hipercard-logo-3.png" width="30" height="30">
           <img src="../img/elo.png" width="30" height="30">
           </seaction>
-    </div>
+        </div>
     
         <div class="Siga">
           <h5>SIGA-NOS</h5>
-          <section style="display:grid; row-gap: 1rem; margin: 0 auto; top: 92%; right: 30.4%; position: absolute;">
+          <section style="display:grid; row-gap: 1rem; margin: 0 auto; top: 92%; right: 30.4%;">
             <img src="../img/insta.png" width="20" height="20">
             <img src="../img/tw.png" width="20" height="20">
             <img src="../img/face.png" width="20" height="20">
@@ -123,8 +136,7 @@
     </footer>
     <hr>
     <p class="text"> ₢ 2022 Xhopii. Todos os direitos reservados</p>
-   
-   
-      
+
+
 </body>
 </html>

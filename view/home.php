@@ -15,7 +15,7 @@
         <img src="../img/logo.png">
         <h1>Xhopii</h1>
         <ul>
-            <li><a href="../index.html">Sair</a></li>
+            <li><a href="../view/login.php">Sair</a></li>
         </ul>
     </header>
 
@@ -23,7 +23,7 @@
         <nav>
 
             <ul>
-                <li><a href="../view/home.html">Home</a></li>
+                <li><a href="../view/home.php">Home</a></li>
                 <li><a href="../view/cadastroCliente.php">Cadastro Cliente</a></li>
                 <li><a href="../view/cadastroFuncionario.php">Cadastro Funcionário</a></li>
                 <li><a href="../view/cadastroProduto.php">Cadastro Produto</a></li>

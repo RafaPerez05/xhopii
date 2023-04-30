@@ -19,7 +19,7 @@
             <h1>Xhopii</h1>
         </section>
         <section id="cabecalho-logout">
-            <a href="login.php">Sair</a>
+            <a href="../view/login.php">Sair</a>
         </section>
     </header>
 

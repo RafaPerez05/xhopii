@@ -10,6 +10,83 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="icon" href="../img/logo.png" type="image/png">
     <title>Xhopii - Ver Produtos</title>
+    <style>
+        
+    .container { 
+    margin-top: 100px;
+    margin-bottom: 1000px;
+    margin: 100px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 33vh 33vh 33vh 33vh 33vh;
+    grid-template-rows: 700px 300px;
+    gap: 0px 0px;
+    background-color: red;
+    border: 5px solid gainsboro;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "produto1";
+  }
+  
+  .produto1 { grid-area: produto1; }
+
+  
+  .container img {
+    width: 15vw;
+    height: 15vw;
+  
+  }
+  
+  .container p {
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  }
+  
+  .produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 2px solid gray;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  }
+  
+  .produto img {
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .produto .descricao {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .pre{
+    display: flex;
+  }
+
+  .preço{
+    color:rgb(251,86,48);
+  }
+
+  .quant{
+    color:gray;
+  }
+    </style>
 </head>
 <body>
 
@@ -19,7 +96,7 @@
             <h1>Xhopii</h1>
         </section>
         <section id="cabecalho-logout">
-            <a href="login.php">Sair</a>
+            <a href="../view/login.php">Sair</a>
         </section>
     </header>
 
@@ -37,23 +114,28 @@
 
     <section class="conteudo-visualizar">
         <section class="conteudo-visualizar-box">
+
             <h1>Produtos</h1>
             <?php
+                echo "<div class=\"container\">";
+                echo "<div class=\"produto\">";
+
                 $listaProduto = retornarProduto();
                 while($produto = mysqli_fetch_assoc($listaProduto)){
-                    echo "<section class=\"conteudo-bloco\">";
-                    echo "<h2>Nome: " . $produto["pro_nome"]. "</h2>";
-                    echo "<p>Codigo: " . $produto["pro_cod"] . "</p>";
-                    echo "<p>Fabricante: " . $produto["pro_fab"] . "</p>";
-                    echo "<p>Descrição: " . $produto["pro_des"] . "</p>";
-                    echo "<p>Valor: " . $produto["pro_val"] . "</p>";
-                    echo "<p>Quantidade: " . $produto["pro_qtd"] . "</p>";
-                    echo "<img src=".$produto['pro_img'] ." width='80px' height='80px' >";
-                    echo "</section>";
-
+                    echo "<img src=".$produto['pro_img'] ." >";
+                    echo "<div class=\"product-info\">Descrição: " . $produto["pro_des"] . "</p>";
+                    echo "<div class=\"pre\"";
+                    echo "<a class=\"preço\"> " . $produto["pro_val"] . "</a>";
+                    echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp";
+                    echo "<a class=\"quant\">" . $produto["pro_qtd"] . "</a>";
+                    echo "</div>";
 
                 }
+                echo "</div>";
+                echo "</div>";
+
             ?>
+
         </section>
     </section>
 

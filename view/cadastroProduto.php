@@ -12,7 +12,7 @@
         <img src="../img/logo.png">
         <h1>Xhopii</h1>
         <ul>
-            <li><a href="../index.html">Sair</a></li>
+            <li><a href="../view/login.php">Sair</a></li>
         </ul>
     </header>
 

@@ -92,8 +92,9 @@
                 echo "<div class=\"container\">";
                 while($produto = mysqli_fetch_assoc($listaProduto)){
                   echo "<div class=\"produto\">";
-                    echo "<a href='produtoSe.php?imagem=".$produto['pro_img']."'><img src=".$produto['pro_img'] ."></a>";
-                    echo "<div class=\"product-info\">" . $produto["pro_nome"];
+                  echo "<a href='produtoSe.php?imagem=".$produto['pro_img']."&nome=".$produto['pro_nome']."&valor=".$produto['pro_val']."&quantidade=".$produto['pro_qtd']."'><img src=".$produto['pro_img'] ."></a>";
+                  
+                  echo "<div class=\"product-info\">" . $produto["pro_nome"];
                     echo "<div class=\"pre\"";
                     echo "<a class=\"preço\">Preço:R$" . $produto["pro_val"] . "</a>";
                     echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp";

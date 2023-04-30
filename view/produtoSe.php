@@ -39,6 +39,12 @@
         <section class="left">
            <?php
            $imagem_selecionada = $_GET['imagem'];
+           $nome_selecionado = $_GET['nome'];
+           $valor_selecionado = $_GET['valor'];
+           $qtd_selecionado = $_GET['quantidade'];
+
+
+
            
             echo "<div class=\"menores\">";
             echo "<div id=\"preto\">";
@@ -65,32 +71,27 @@
             echo "<div class=\"maior\">";
                 echo" <img id=\"principal\" src= '$imagem_selecionada.'>";
             echo "</div>";
-            ?>
-        </section>
 
-        <section class="right">
-            <h1>Camisa Desenvolvedor Front-End CSS</h1>
-            <h2>$56,90</h2>
-            <p>171 pecas disponíveis</p>
-            <p>Modelos:</p>
-            <div class="modelos">
-                <button name="preto">Preto</button>
-                <button name="azul">Azul</button>
-                <button name="verde">Verde</button>
-                <button name="cinza">Cinza</button>
-                <button name="rosa">Rosa</button>
-            </div>
-            <p>Tamanhos:</p>
-            <div class="modelos">
-                <button name="f">F</button>
-                <button name="m">M</button>
-                <button name="g">G</button>
-                <button name="gg">GG</button>
-            </div>
-            <p name="tamanho">Tamanho Selecionado:</p><span class="tamanhos-select"></span>
-            <button id="comprar"name="comprar">Comprar Agora</button>
-        </section>
-        <label></label>
+        echo    "</section>";
+
+        echo "<section class=\"right\">";
+            echo "<h1> $nome_selecionado </h1>";
+           
+            echo"<h2>R$ $valor_selecionado</h2>";
+
+            echo"<p>$qtd_selecionado pecas disponíveis</p>";
+            echo "<p>Tamanhos:</p>";
+            echo "<div class=\"modelos\">";
+                echo "<button name=\"f\">F";  echo "</button>";
+                echo "<button name=\"m\">M";  echo "</button>";
+                echo "<button name=\"g\">G";  echo "</button>";
+                echo "<button name=\"gg\">GG";  echo "</button>";
+            echo "</div>";
+            echo "<p name=\"tamanho\">Tamanho Selecionado:</p>";
+            echo "<button id=\"comprar\">Comprar Agora"; echo" </button>";
+        echo "</section>";
+        ?>
+        
     </main>
 
 
